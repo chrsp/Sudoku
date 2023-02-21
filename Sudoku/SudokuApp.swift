@@ -8,7 +8,7 @@
 import SwiftUI
 import BacktrackingSolver
 import UI
-import Models 
+import GameEngine 
 import SudokuFactory
 
 @main

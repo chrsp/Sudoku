@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Models
+import GameEngine
 
 struct SquareView: View {
     @ObservedObject var viewModel: SquareViewModel

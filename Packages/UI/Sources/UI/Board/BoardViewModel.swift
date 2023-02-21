@@ -7,7 +7,7 @@
 
 import Foundation
 import BacktrackingSolver
-import Models
+import GameEngine
 import SudokuFactory
 
 public class BoardViewModel: ObservableObject {
@@ -25,7 +25,9 @@ public class BoardViewModel: ObservableObject {
     }
     
     func createSudoku() {
-        let newSudoku = factory.createSudoku()
+        guard let newSudoku = factory.createSudoku() else {
+            return 
+        }
         solver.game = newSudoku
         data = newSudoku.board
     }
@@ -40,7 +42,9 @@ public class BoardViewModel: ObservableObject {
             }
         }
         
-        let _ = self.solver.solve()
+        DispatchQueue.main.async {
+            let _ = self.solver.solve()
+        }
     }
     
     func solveSudokuStepByStep() {

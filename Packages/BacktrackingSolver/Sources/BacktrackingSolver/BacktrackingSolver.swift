@@ -6,15 +6,21 @@
 //
 
 import Foundation
-import Models
+import GameEngine
 
-public struct BacktrackingSolver {
+public class BacktrackingSolver {
 
-    public var game: Game
+    public var game: Game {
+        didSet {
+            interactionIdx = 0
+        }
+    }
     
     public var didFinishSolving: (([Square]) -> Void)?
     public var didUpdateSolution: (([Square]) -> Void)?
     public var dispatcher: DispatchGroup?
+    
+    private var interactionIdx = 0
     
     public init(game: Game) {
         self.game = game
@@ -23,14 +29,21 @@ public struct BacktrackingSolver {
     public func solve() -> Bool {
         dispatcher?.enter()
         
+        let maxNumberOfInteractions = 50000
+        
         guard let firstEmptySquare = game.firstEmptySquare else {
             return true
         }
-
+        
+        guard interactionIdx <= maxNumberOfInteractions else {
+            return false
+        }
+        
         for value in 1...9 where game.canAdd(value, to: firstEmptySquare) {
             firstEmptySquare.value = value
             didUpdateSolution?(game.board)
             dispatcher?.wait()
+            self.interactionIdx += 1
             if solve() {
                 didFinishSolving?(game.board)
                 return true
@@ -43,7 +56,7 @@ public struct BacktrackingSolver {
         return false
     }
     
-    public mutating func solveNextStep() {
+    public func solveNextStep() {
         if dispatcher == nil {
             dispatcher = DispatchGroup()
             startSudokuSolver()

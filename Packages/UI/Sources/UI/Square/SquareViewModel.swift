@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Models
+import GameEngine
 
 class SquareViewModel: ObservableObject {
     @Published private var square: Square

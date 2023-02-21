@@ -47,7 +47,7 @@ public struct BoardView: View {
     }
 }
 
-import Models
+import GameEngine
 
 struct BoardView_Previews: PreviewProvider {
     static var previews: some View {

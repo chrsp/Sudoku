@@ -1,5 +1,5 @@
 import XCTest
-@testable import Models
+@testable import GameEngine
 
 final class GameTests: XCTestCase {
     func testRulesCreation() throws {

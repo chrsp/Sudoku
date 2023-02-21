@@ -13,7 +13,7 @@ let package = Package(
             targets: ["BacktrackingSolver"]),
     ],
     dependencies: [
-        .package(path: "../Models")
+        .package(path: "../GameEngine")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -22,7 +22,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "BacktrackingSolver",
-            dependencies: ["Models"]),
+            dependencies: ["GameEngine"]),
         .testTarget(
             name: "BacktrackingSolverTests",
             dependencies: ["BacktrackingSolver"]),
