@@ -1,6 +1,6 @@
 //
 //  Square.swift
-//  Sudoku
+// 
 //
 //  Created by Charles Prado on 15/02/2023.
 //

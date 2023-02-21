@@ -24,11 +24,7 @@ public struct Game {
                 let block = (rowIndex / 3) * 3 + (columnIndex / 3)
                 let isPermanent = value != 0
 
-                let square = Square(value: value,
-                                    row: rowIndex,
-                                    column: columnIndex,
-                                    block: block,
-                                    isPermanent: isPermanent)
+                let square = Square(value: value, row: rowIndex, column: columnIndex, block: block, isPermanent: isPermanent)
 
                 rows[rowIndex, default: []].append(square)
                 columns[columnIndex, default: []].append(square)
@@ -51,8 +47,8 @@ extension Game {
         board[row + (9 * col)]
     }
     
-    public var firstEmptySquareIndex: Int? {
-        board.firstIndex(where: { $0.value == 0 })
+    public var firstEmptySquare: Square? {
+        board.first(where: { $0.value == 0 })
     }
 }
 

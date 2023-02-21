@@ -1,6 +1,6 @@
 //
 //  SquareViewModel.swift
-//  Sudoku
+//
 //
 //  Created by Charles Prado on 20/02/2023.
 //
