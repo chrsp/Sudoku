@@ -9,6 +9,7 @@ import SwiftUI
 import BacktrackingSolver
 import UI
 import Models 
+import SudokuFactory
 
 @main
 struct SudokuApp: App {

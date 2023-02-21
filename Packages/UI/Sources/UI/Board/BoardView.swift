@@ -21,6 +21,7 @@ public struct BoardView: View {
                 sudokuBoard
                     .border(Color.black, width: 1.0)
             }
+            solveButton("Create!", viewModel.createSudoku)
             solveButton("Solve!", viewModel.solveSudoku)
             solveButton("Solve Step By Step!", viewModel.solveSudokuStepByStep)
         }

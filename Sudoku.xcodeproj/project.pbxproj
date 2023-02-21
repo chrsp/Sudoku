@@ -48,6 +48,7 @@
 		3464AA32299D4E19003542CA /* SudokuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3464AA70299E9019003542CA /* BacktrackingSolver */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BacktrackingSolver; sourceTree = "<group>"; };
 		3464AA71299E9075003542CA /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
+		3485434A29A56427003FCA57 /* SudokuFactory */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SudokuFactory; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +139,7 @@
 		3464AA6E299E8472003542CA /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				3485434A29A56427003FCA57 /* SudokuFactory */,
 				3432483029A5250A0077D1D6 /* UI */,
 				3464AA71299E9075003542CA /* Models */,
 				3464AA70299E9019003542CA /* BacktrackingSolver */,

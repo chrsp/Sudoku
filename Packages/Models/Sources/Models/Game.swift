@@ -53,6 +53,10 @@ extension Game {
 }
 
 public extension Game {
+    static func newGame() -> [[Int]] {
+        Array(repeating: Array(repeating: 0, count: 9), count: 9)
+    }
+    
     static func fakeData() -> [[Int]] {
         [[0, 0, 0, 0, 0, 0, 6, 9, 0],
          [0, 2, 8, 1, 0, 0, 0, 0, 0],

@@ -8,16 +8,26 @@
 import Foundation
 import BacktrackingSolver
 import Models
+import SudokuFactory
 
 public class BoardViewModel: ObservableObject {
     @Published var data: [Square]
-    private var solver: BacktrackingSolver!
+    
+    private var factory: SudokuFactory
+    private var solver: BacktrackingSolver
 
     public init(data: [[Int]]) {
         let game = Game(game: data)
+        factory = .init()
         solver = .init(game: game)
         
         self.data = solver.game.board
+    }
+    
+    func createSudoku() {
+        let newSudoku = factory.createSudoku()
+        solver.game = newSudoku
+        data = newSudoku.board
     }
 
     func solveSudoku() {

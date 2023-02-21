@@ -10,7 +10,7 @@ import Models
 
 public struct BacktrackingSolver {
 
-    public private(set) var game: Game
+    public var game: Game
     
     public var didFinishSolving: (([Square]) -> Void)?
     public var didUpdateSolution: (([Square]) -> Void)?
