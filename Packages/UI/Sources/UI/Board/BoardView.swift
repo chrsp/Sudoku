@@ -17,11 +17,12 @@ public struct BoardView: View {
     public var body: some View {
         VStack(spacing: 16) {
             ZStack {
-                sudokuBoard.border(Color.black, width: 1.0)
-                gridView
+                PlayfieldView()
+                sudokuBoard
+                    .border(Color.black, width: 1.0)
             }
-            solveButton
-            solveStepByStepButton
+            solveButton("Solve!", viewModel.solveSudoku)
+            solveButton("Solve Step By Step!", viewModel.solveSudokuStepByStep)
         }
         .padding()
     }
@@ -38,49 +39,9 @@ public struct BoardView: View {
         }
     }
     
-    private var gridView: some View {
-            ZStack {
-                VStack(spacing: 40) {
-                    Spacer(minLength: 40)
-                    Color.black.opacity(0.4).frame(width: 360, height: 0.5)
-                    Color.black.opacity(0.4).frame(width: 360, height: 0.5)
-                    Color.black.opacity(0.8).frame(width: 360, height: 1.0)
-                    
-                    Color.black.opacity(0.4).frame(width: 360, height: 0.5)
-                    Color.black.opacity(0.4).frame(width: 360, height: 0.5)
-                    Color.black.opacity(0.8).frame(width: 360, height: 1.0)
-                    
-                    Color.black.opacity(0.4).frame(width: 360, height: 0.5)
-                    Color.black.opacity(0.4).frame(width: 360, height: 0.5)
-                    Spacer(minLength: 40)
-                }
-                
-                HStack(spacing: 40) {
-                    Spacer(minLength: 40)
-                    Color.black.opacity(0.4).frame(width: 0.5, height: 360)
-                    Color.black.opacity(0.4).frame(width: 0.5, height: 360)
-                    Color.black.opacity(0.8).frame(width: 1.0, height: 360)
-                    
-                    Color.black.opacity(0.4).frame(width: 0.5, height: 360)
-                    Color.black.opacity(0.4).frame(width: 0.5, height: 360)
-                    Color.black.opacity(0.8).frame(width: 1.0, height: 360)
-                    
-                    Color.black.opacity(0.4).frame(width: 0.5, height: 360)
-                    Color.black.opacity(0.4).frame(width: 0.5, height: 360)
-                    Spacer(minLength: 40)
-                }
-            }
-    }
-
-    private var solveButton: some View {
-        Button("Solve!") {
-            let _ = viewModel.solveSudoku()
-        }
-    }
-    
-    private var solveStepByStepButton: some View {
-        Button("Solve Step By Step!") {
-            let _ = viewModel.solveSudokuStepByStep()
+    private func solveButton(_ title: String, _ action: @escaping () -> Void) -> some View {
+        Button(title) {
+            let _ = action()
         }
     }
 }

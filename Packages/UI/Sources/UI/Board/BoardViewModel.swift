@@ -21,6 +21,7 @@ public class BoardViewModel: ObservableObject {
     }
 
     func solveSudoku() {
+        solver.dispatcher = nil
         solver.didUpdateSolution = nil
         
         solver.didFinishSolving = { newData in
