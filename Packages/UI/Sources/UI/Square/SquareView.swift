@@ -14,7 +14,6 @@ struct SquareView: View {
     var body: some View {
         Text(viewModel.squareText)
             .frame(width: 40, height: 40, alignment: .center)
-            .border(Color.black.opacity(0.7))
     }
 }
 

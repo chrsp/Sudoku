@@ -16,21 +16,32 @@ public class BoardViewModel: ObservableObject {
     public init(data: [[Int]]) {
         let game = Game(game: data)
         solver = .init(game: game)
+        
         self.data = solver.game.board
-//        
-//        solver.didFinishSolving =  { newData in
-//            self.data = newData
-//        }
-
-        solver.didUpdateSolution =  { newData in
-            self.data = newData
-        }
     }
 
     func solveSudoku() {
-        let _ = solver.solve()
+        solver.didUpdateSolution = nil
+        
+        solver.didFinishSolving = { newData in
+            DispatchQueue.main.async {
+                self.data = newData
+            }
+        }
+        
+        let _ = self.solver.solve()
     }
-
+    
+    func solveSudokuStepByStep() {
+        solver.didUpdateSolution = { newData in
+            DispatchQueue.main.async {
+                self.data = newData
+            }
+        }
+        
+        solver.solveNextStep()
+    }
+    
     func squareViewModel(at row: Int, column: Int) -> SquareViewModel {
         SquareViewModel(square: data[row+9*column])
     }
