@@ -1,3 +1,10 @@
+//
+//  Square.swift
+//
+//
+//  Created by Charles Prado on 21/02/2023.
+//
+
 import Foundation
 
 public class Square {

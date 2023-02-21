@@ -15,6 +15,7 @@
 		3464AA31299D4E19003542CA /* SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA30299D4E19003542CA /* SudokuUITests.swift */; };
 		3464AA33299D4E19003542CA /* SudokuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA32299D4E19003542CA /* SudokuUITestsLaunchTests.swift */; };
 		3485434729A527B5003FCA57 /* BacktrackingSolver in Frameworks */ = {isa = PBXBuildFile; productRef = 3485434629A527B5003FCA57 /* BacktrackingSolver */; };
+		3485434929A52C35003FCA57 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 3485434829A52C35003FCA57 /* Models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3485434929A52C35003FCA57 /* Models in Frameworks */,
 				3432483229A5262A0077D1D6 /* UI in Frameworks */,
 				3485434729A527B5003FCA57 /* BacktrackingSolver in Frameworks */,
 			);
@@ -169,6 +171,7 @@
 			packageProductDependencies = (
 				3432483129A5262A0077D1D6 /* UI */,
 				3485434629A527B5003FCA57 /* BacktrackingSolver */,
+				3485434829A52C35003FCA57 /* Models */,
 			);
 			productName = Sudoku;
 			productReference = 3464AA12299D4E18003542CA /* Sudoku.app */;
@@ -620,6 +623,10 @@
 		3485434629A527B5003FCA57 /* BacktrackingSolver */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BacktrackingSolver;
+		};
+		3485434829A52C35003FCA57 /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

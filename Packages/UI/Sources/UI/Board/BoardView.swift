@@ -41,9 +41,11 @@ public struct BoardView: View {
     }
 }
 
+import Models
+
 struct BoardView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = BoardViewModel(data: BoardViewModel.fakeData())
+        let viewModel = BoardViewModel(data: Game.fakeData())
         BoardView(viewModel: viewModel)
     }
 }
