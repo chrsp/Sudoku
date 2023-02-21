@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BacktrackingSolver
+import UI
 
 @main
 struct SudokuApp: App {

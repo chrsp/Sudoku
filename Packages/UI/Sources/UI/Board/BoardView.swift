@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-struct BoardView: View {
+public struct BoardView: View {
     @ObservedObject var viewModel: BoardViewModel
+    
+    public init(viewModel: BoardViewModel) {
+        self.viewModel = viewModel
+    }
 
-    var body: some View {
+    public var body: some View {
         VStack(spacing: 0) {
             sudokuBoard
             solveButton
@@ -18,7 +22,7 @@ struct BoardView: View {
         .padding()
     }
 
-    var sudokuBoard: some View {
+    private var sudokuBoard: some View {
         VStack(spacing: 0) {
             ForEach(0..<9) { row in
                 HStack(spacing: 0) {
@@ -30,7 +34,7 @@ struct BoardView: View {
         }
     }
 
-    var solveButton: some View {
+    private var solveButton: some View {
         Button("Solve!") {
             let _ = viewModel.solveSudoku()
         }

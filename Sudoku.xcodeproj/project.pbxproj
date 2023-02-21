@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3432483229A5262A0077D1D6 /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = 3432483129A5262A0077D1D6 /* UI */; };
 		3464AA16299D4E18003542CA /* SudokuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA15299D4E18003542CA /* SudokuApp.swift */; };
 		3464AA1A299D4E19003542CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3464AA19299D4E19003542CA /* Assets.xcassets */; };
 		3464AA1D299D4E19003542CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3464AA1C299D4E19003542CA /* Preview Assets.xcassets */; };
 		3464AA27299D4E19003542CA /* SudokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA26299D4E19003542CA /* SudokuTests.swift */; };
 		3464AA31299D4E19003542CA /* SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA30299D4E19003542CA /* SudokuUITests.swift */; };
 		3464AA33299D4E19003542CA /* SudokuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA32299D4E19003542CA /* SudokuUITestsLaunchTests.swift */; };
-		3464AA41299D540C003542CA /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA40299D540C003542CA /* SquareView.swift */; };
-		3464AA43299D56F6003542CA /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA42299D56F6003542CA /* BoardView.swift */; };
-		3464AA74299EB7ED003542CA /* BacktrackingSolver in Frameworks */ = {isa = PBXBuildFile; productRef = 3464AA73299EB7ED003542CA /* BacktrackingSolver */; };
-		3464AA8629A3B38D003542CA /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA8529A3B38D003542CA /* BoardViewModel.swift */; };
-		3464AA8929A3B3DB003542CA /* SquareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464AA8829A3B3DB003542CA /* SquareViewModel.swift */; };
+		3485434729A527B5003FCA57 /* BacktrackingSolver in Frameworks */ = {isa = PBXBuildFile; productRef = 3485434629A527B5003FCA57 /* BacktrackingSolver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3432483029A5250A0077D1D6 /* UI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UI; sourceTree = "<group>"; };
 		3464AA12299D4E18003542CA /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3464AA15299D4E18003542CA /* SudokuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuApp.swift; sourceTree = "<group>"; };
 		3464AA19299D4E19003542CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,12 +45,8 @@
 		3464AA2C299D4E19003542CA /* SudokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3464AA30299D4E19003542CA /* SudokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuUITests.swift; sourceTree = "<group>"; };
 		3464AA32299D4E19003542CA /* SudokuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3464AA40299D540C003542CA /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		3464AA42299D56F6003542CA /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		3464AA70299E9019003542CA /* BacktrackingSolver */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BacktrackingSolver; sourceTree = "<group>"; };
 		3464AA71299E9075003542CA /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
-		3464AA8529A3B38D003542CA /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
-		3464AA8829A3B3DB003542CA /* SquareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3464AA74299EB7ED003542CA /* BacktrackingSolver in Frameworks */,
+				3432483229A5262A0077D1D6 /* UI in Frameworks */,
+				3485434729A527B5003FCA57 /* BacktrackingSolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +104,6 @@
 				3464AA15299D4E18003542CA /* SudokuApp.swift */,
 				3464AA19299D4E19003542CA /* Assets.xcassets */,
 				3464AA1B299D4E19003542CA /* Preview Content */,
-				3464AA8729A3B3D0003542CA /* Square */,
-				3464AA8429A3B381003542CA /* Board */,
 			);
 			path = Sudoku;
 			sourceTree = "<group>";
@@ -143,6 +136,7 @@
 		3464AA6E299E8472003542CA /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				3432483029A5250A0077D1D6 /* UI */,
 				3464AA71299E9075003542CA /* Models */,
 				3464AA70299E9019003542CA /* BacktrackingSolver */,
 			);
@@ -154,24 +148,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3464AA8429A3B381003542CA /* Board */ = {
-			isa = PBXGroup;
-			children = (
-				3464AA42299D56F6003542CA /* BoardView.swift */,
-				3464AA8529A3B38D003542CA /* BoardViewModel.swift */,
-			);
-			path = Board;
-			sourceTree = "<group>";
-		};
-		3464AA8729A3B3D0003542CA /* Square */ = {
-			isa = PBXGroup;
-			children = (
-				3464AA40299D540C003542CA /* SquareView.swift */,
-				3464AA8829A3B3DB003542CA /* SquareViewModel.swift */,
-			);
-			path = Square;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +167,8 @@
 			);
 			name = Sudoku;
 			packageProductDependencies = (
-				3464AA73299EB7ED003542CA /* BacktrackingSolver */,
+				3432483129A5262A0077D1D6 /* UI */,
+				3485434629A527B5003FCA57 /* BacktrackingSolver */,
 			);
 			productName = Sudoku;
 			productReference = 3464AA12299D4E18003542CA /* Sudoku.app */;
@@ -307,11 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3464AA41299D540C003542CA /* SquareView.swift in Sources */,
-				3464AA43299D56F6003542CA /* BoardView.swift in Sources */,
-				3464AA8929A3B3DB003542CA /* SquareViewModel.swift in Sources */,
 				3464AA16299D4E18003542CA /* SudokuApp.swift in Sources */,
-				3464AA8629A3B38D003542CA /* BoardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku/Preview Content\"";
-				DEVELOPMENT_TEAM = 8D69GAM5D6;
+				DEVELOPMENT_TEAM = DRQ4AW6V2L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -478,12 +451,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.holografix.Sudoku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.holografix.SudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,7 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku/Preview Content\"";
-				DEVELOPMENT_TEAM = 8D69GAM5D6;
+				DEVELOPMENT_TEAM = DRQ4AW6V2L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -507,12 +481,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.holografix.Sudoku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.holografix.SudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -638,7 +613,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3464AA73299EB7ED003542CA /* BacktrackingSolver */ = {
+		3432483129A5262A0077D1D6 /* UI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UI;
+		};
+		3485434629A527B5003FCA57 /* BacktrackingSolver */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BacktrackingSolver;
 		};

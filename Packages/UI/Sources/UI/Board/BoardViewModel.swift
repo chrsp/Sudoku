@@ -9,11 +9,11 @@ import Foundation
 import BacktrackingSolver
 import Models
 
-class BoardViewModel: ObservableObject {
+public class BoardViewModel: ObservableObject {
     @Published var data: [Square]
     private var solver: BacktrackingSolver!
 
-    init(data: [[Int]]) {
+    public init(data: [[Int]]) {
         solver = .init(game: data)
         self.data = solver.board
 //        
@@ -35,7 +35,7 @@ class BoardViewModel: ObservableObject {
     }
 }
 
-extension BoardViewModel {
+public extension BoardViewModel {
     static func fakeData() -> [[Int]] {
         [[0, 1, 0, 0, 0, 0, 0, 6, 9],
          [4, 0, 6, 0, 0, 0, 0, 7, 5],
